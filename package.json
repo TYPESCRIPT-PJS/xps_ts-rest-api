@@ -8,7 +8,9 @@
       "*.*"
     ],
     "ignore": [
-      "test/*", "dist/*", "node_modules/*"
+      "test/*",
+      "dist/*",
+      "node_modules/*"
     ],
     "ext": "ts,ejs,json,css,js,html",
     "delay": "3"
