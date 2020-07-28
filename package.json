@@ -1,0 +1,48 @@
+{
+  "name": "xps_ts-rest-api",
+  "version": "1.0.0",
+  "description": "Automatice temperature and humidity control ",
+  "main": "index.js",
+  "nodemonConfig": {
+    "watch": [
+      "*.*"
+    ],
+    "ignore": [
+      "test/*", "dist/*", "node_modules/*"
+    ],
+    "ext": "ts,ejs,json,css,js,html",
+    "delay": "3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "all": "tsc && node dist/index.js",
+    "dev:tsOnly": "tsc-watch --onSuccess \"node dist/index.js\" ",
+    "start": "node dist/index.js",
+    "dev:all": "nodemon --exec \"npm run all\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.25",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.7",
+    "@types/jsonwebtoken": "^8.5.0",
+    "@types/mongoose": "^5.7.32",
+    "@types/morgan": "^1.9.1",
+    "@types/passport": "^1.0.4",
+    "@types/passport-jwt": "^3.0.3",
+    "nodemon": "^2.0.4",
+    "tsc-watch": "^4.2.9",
+    "typescript": "^3.9.7"
+  }
+}
